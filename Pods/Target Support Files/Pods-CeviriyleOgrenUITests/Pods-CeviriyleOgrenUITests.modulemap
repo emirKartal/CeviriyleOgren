@@ -1,0 +1,6 @@
+framework module Pods_CeviriyleOgrenUITests {
+  umbrella header "Pods-CeviriyleOgrenUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
