@@ -13,6 +13,7 @@
 		3003C2761FD07A7000F2F146 /* TopCategoryEnVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003C2751FD07A7000F2F146 /* TopCategoryEnVC.swift */; };
 		3003C2781FD07A9A00F2F146 /* TopCategoryTurVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3003C2771FD07A9A00F2F146 /* TopCategoryTurVC.swift */; };
 		30089CEC1FF80A4E0079B9A5 /* WriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30089CEB1FF80A4E0079B9A5 /* WriteVC.swift */; };
+		30444D412067EDED0067D188 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30444D402067EDED0067D188 /* Model.swift */; };
 		3045AB421FE1D80100708BA1 /* ResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045AB411FE1D80100708BA1 /* ResultVC.swift */; };
 		30777F801FCF1F3A00801581 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30777F7F1FCF1F3A00801581 /* AppDelegate.swift */; };
 		30777F821FCF1F3A00801581 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30777F811FCF1F3A00801581 /* LoginVC.swift */; };
@@ -64,6 +65,7 @@
 		3003C2751FD07A7000F2F146 /* TopCategoryEnVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCategoryEnVC.swift; sourceTree = "<group>"; };
 		3003C2771FD07A9A00F2F146 /* TopCategoryTurVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCategoryTurVC.swift; sourceTree = "<group>"; };
 		30089CEB1FF80A4E0079B9A5 /* WriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteVC.swift; sourceTree = "<group>"; };
+		30444D402067EDED0067D188 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		3045AB411FE1D80100708BA1 /* ResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultVC.swift; sourceTree = "<group>"; };
 		30777F7C1FCF1F3A00801581 /* CeviriyleOgren.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CeviriyleOgren.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30777F7F1FCF1F3A00801581 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -168,7 +170,6 @@
 				30777F8B1FCF1F3A00801581 /* LaunchScreen.storyboard */,
 				30777F8E1FCF1F3A00801581 /* Info.plist */,
 				30777F861FCF1F3A00801581 /* CeviriyleOgren.xcdatamodeld */,
-				309419F31FD082260077369D /* Alamofire.swift */,
 			);
 			path = CeviriyleOgren;
 			sourceTree = "<group>";
@@ -194,6 +195,8 @@
 		30777FB01FCF1F8A00801581 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				30444D402067EDED0067D188 /* Model.swift */,
+				309419F31FD082260077369D /* Alamofire.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 				30AEA3D71FF0630000986904 /* ResultTableViewCell.swift in Sources */,
 				30CC319C1FCF7ED1000A4955 /* HomeVC.swift in Sources */,
 				30851AAE1FE83D0F008DF85D /* SubCategoryTurVC.swift in Sources */,
+				30444D412067EDED0067D188 /* Model.swift in Sources */,
 				30CC319A1FCF7BAB000A4955 /* RegisterVC.swift in Sources */,
 				30777FB41FCF20A700801581 /* Gradient.swift in Sources */,
 			);

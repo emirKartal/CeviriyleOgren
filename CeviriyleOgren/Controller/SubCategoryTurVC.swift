@@ -14,38 +14,35 @@ class SubCategoryTurVC: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     var subCatId = Int()
     var alamofireElement =  AlamofireData()
-    var subCategoryArr = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //self.tabBarController?.tabBar.isHidden = true
-        alamofireElement.getSubCategory(categoryId: subCatId)
         tableView.delegate = self
         tableView.dataSource = self
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
         
-        subCategoryArr = alamofireElement.subCategory
-        tableView.reloadData()
-        
+        DispatchQueue.global(qos: .userInteractive).async {
+            self.alamofireElement.getSubCategory(categoryId: self.subCatId)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return subCategoryArr.count
+        return alamofireElement.model.subCategory.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "subCatCellTur", for: indexPath)
-        cell.textLabel?.text = subCategoryArr[indexPath.row]
+        cell.textLabel?.text = alamofireElement.model.subCategory[indexPath.row]
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let qId = alamofireElement.questionId[indexPath.row]
+        let qId = alamofireElement.model.questionId[indexPath.row]
         performSegue(withIdentifier: "toQuestionTurVC", sender: qId)
         
     }

@@ -53,9 +53,9 @@ class QuestionVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         
         if fromWriteVC == false {
-            questionArr = alamofireElement.questionArr
-            answerArr = alamofireElement.answerArr
-            soundArr = alamofireElement.soundArr
+            questionArr = alamofireElement.model.questionArr
+            answerArr = alamofireElement.model.answerArr
+            soundArr = alamofireElement.model.soundArr
         }
         questionLabel.text = questionArr[questionSeq]
         numOfQuesLabel.text = "\(questionSeq + 1)/\(answerArr.count)"

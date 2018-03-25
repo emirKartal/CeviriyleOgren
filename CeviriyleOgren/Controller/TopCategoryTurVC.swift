@@ -13,32 +13,29 @@ class TopCategoryTurVC: UIViewController,UITableViewDelegate,UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     
     var alamofireElement =  AlamofireData()
-    var topCatArr = [String]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
-        DispatchQueue.main.async {
+        
+        DispatchQueue.global(qos: .userInteractive).async {
             self.alamofireElement.getTopCategory()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
-        topCatArr = alamofireElement.topCategory
-        tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return topCatArr.count
+        return alamofireElement.model.topCategory.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "topCatCellTur", for: indexPath)
-        cell.textLabel?.text = topCatArr[indexPath.row]
+        cell.textLabel?.text = alamofireElement.model.topCategory[indexPath.row]
         
         return cell
     }
